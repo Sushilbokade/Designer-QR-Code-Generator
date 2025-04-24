@@ -12,7 +12,7 @@ A web application that generates beautiful, artistic QR codes with various patte
 
 ## Live Demo
 
-Visit [https://artistic-qr-generator.herokuapp.com](https://artistic-qr-generator.herokuapp.com) to try it out!
+The application will be available after deployment. Follow the deployment instructions below to host your own instance.
 
 ## Local Development
 
@@ -33,21 +33,20 @@ Visit [https://artistic-qr-generator.herokuapp.com](https://artistic-qr-generato
    ```
 5. Visit `http://localhost:5000` in your browser
 
-## Deployment to Heroku
+## Free Deployment to Render
 
-1. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-2. Login to Heroku:
-   ```bash
-   heroku login
-   ```
-3. Create a new Heroku app:
-   ```bash
-   heroku create your-app-name
-   ```
-4. Push to Heroku:
-   ```bash
-   git push heroku main
-   ```
+1. Create a free account at [Render.com](https://render.com)
+2. Connect your GitHub repository (first push your code to GitHub)
+3. In Render Dashboard, click "New +" and select "Web Service"
+4. Choose your repository
+5. Fill in these details:
+   - Name: artistic-qr-generator (or your preferred name)
+   - Environment: Python
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `gunicorn app:app`
+6. Click "Create Web Service"
+
+Your application will be deployed and available at the URL provided by Render (usually something like `https://your-app-name.onrender.com`).
 
 ## Technologies Used
 
